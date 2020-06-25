@@ -18,4 +18,9 @@ public class LineSegment
 	{
 		return B;
 	}
+	
+	public Point getMid()
+	{
+		return new Point((A.x + B.x) / 2, (A.y + B.y) / 2);
+	}
 }
