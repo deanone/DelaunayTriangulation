@@ -2,8 +2,7 @@ import java.util.Random;
 import java.util.ArrayList;
 import javax.swing.JFrame;
 
-public class DelaunayTriangulation
-{	
+public class DelaunayTriangulation {	
 	public static void main(String[] args) {
 		// Generate random points in the 2d plane
 		int numOfPoints = 100;
