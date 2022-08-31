@@ -6,21 +6,17 @@ import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.JPanel;
 
-public class DelaunayDrawer extends JPanel 
-{
+public class DelaunayDrawer extends JPanel {
 	ArrayList<Point> points;
-	public DelaunayDrawer(ArrayList<Point> points)
-	{
+	public DelaunayDrawer(ArrayList<Point> points) {
 		this.points = new ArrayList<Point>();
 		this.points = points;
 	}
 	
-	public void paintComponent(Graphics g)
-	{
+	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2dObject = (Graphics2D) g;
-		for (int i = 0; i < points.size(); i++)
-		{
+		for (int i = 0; i < points.size(); i++) {
 			Point p = points.get(i);
 			double x = p.getX();
 			double y = p.getY();

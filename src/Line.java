@@ -1,4 +1,3 @@
-
 public class Line
 {
 	double a;

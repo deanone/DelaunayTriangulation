@@ -1,20 +1,16 @@
-
-public class Triangle
-{
+public class Triangle {
 	Point A;
 	Point B;
 	Point C;
 	Point circumcenter;
 	
-	public Triangle(Point A, Point B, Point C)
-	{
+	public Triangle(Point A, Point B, Point C) {
 		this.A = A;
 		this.B = B;
 		this.C = C;
 	}
 	
-	static Point lineLineIntersection(Line l1, Line l2)
-	{
+	static Point lineLineIntersection(Line l1, Line l2) {
 		double a1 = l1.getA();
 		double b1 = l1.getB();
 		double c1 = l1.getC();
@@ -24,23 +20,19 @@ public class Triangle
 		double c2 = l2.getC();
 		
 		double det = (a1 * b2) - (a2 * b1);
-		if (det == 0)
-		{
+		if (det == 0) {
 			System.out.println("The lines are parallel");
 			return new Point(Double.MAX_VALUE, Double.MAX_VALUE);
 		}
-		else
-		{
+		else {
             double x = ((b2 * c1) - (b1 * c2)) / det; 
             double y = ((a1 * c2) - (a2 * c1)) / det; 
             return new Point(x, y); 
 		}
 	}
 	
-	void computeCircumcenter()
-	{
-		if (circumcenter == null)
-		{
+	void computeCircumcenter() {
+		if (circumcenter == null) {
 			Line side1 = new Line(A, B);
 			Point side1Mid = new Point((A.x + B.x) / 2, (A.y + B.y) / 2);
 			Line side1Perpendicular = side1.getPerpendicular(side1Mid);
@@ -53,23 +45,19 @@ public class Triangle
 		}
 	}
 	
-	public Point getA()
-	{
+	public Point getA() {
 		return A;
 	}
 	
-	public Point getB()
-	{
+	public Point getB() {
 		return B;
 	}
 	
-	public Point getC()
-	{
+	public Point getC() {
 		return C;
 	}
 	
-	public Point getCircumcenter()
-	{
+	public Point getCircumcenter() {
 		return circumcenter;
 	}
 }
